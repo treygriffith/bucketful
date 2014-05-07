@@ -41,6 +41,8 @@ exports.giveEveryoneReadAccess = (s3client, name, callback) ->
         return found.push grant
     )
 
+    console.log("pars.Grants", pars.Grants);
+
     s3client.putBucketAcl
       Bucket: name
       AccessControlPolicy: pars
